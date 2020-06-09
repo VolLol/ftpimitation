@@ -21,7 +21,9 @@ public class ShowCurrentDirectoryUseCase {
         Stack<String> tmpAllowedPath = sessionContext.getAllowedPath();
         String currentPath = "/";
         for (String s : tmpAllowedPath) {
-            currentPath = currentPath + s + "/";
+            if (!s.equals("/")) {
+                currentPath = currentPath + s + "/";
+            }
         }
         if (currentPath.length() > 2) {
             currentPath = currentPath.substring(0, currentPath.length() - 1);

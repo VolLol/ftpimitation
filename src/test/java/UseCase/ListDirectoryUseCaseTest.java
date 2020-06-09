@@ -18,13 +18,16 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(6, answer.size());
+        Assert.assertEquals(8, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("classes", answer.get(1));
-        Assert.assertEquals("generated", answer.get(2));
-        Assert.assertEquals("reports", answer.get(3));
-        Assert.assertEquals("test-results", answer.get(4));
-        Assert.assertEquals("tmp", answer.get(5));
+        Assert.assertEquals("Mode      Name", answer.get(1));
+        Assert.assertEquals("-d    classes", answer.get(2));
+        Assert.assertEquals("-d    generated", answer.get(3));
+        Assert.assertEquals("-d    libs", answer.get(4));
+        Assert.assertEquals("-d    reports", answer.get(5));
+        Assert.assertEquals("-d    test-results", answer.get(6));
+        Assert.assertEquals("-d    tmp", answer.get(7));
+
     }
 
 
@@ -37,10 +40,13 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(3, answer.size());
+        Assert.assertEquals(5, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("compileJava", answer.get(1));
-        Assert.assertEquals("compileTestJava", answer.get(2));
+        Assert.assertEquals("Mode      Name", answer.get(1));
+        Assert.assertEquals("-d    compileJava", answer.get(2));
+        Assert.assertEquals("-d    compileTestJava", answer.get(3));
+        Assert.assertEquals("-d    jar", answer.get(4));
+
     }
 
     @Test
@@ -52,10 +58,13 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(3, answer.size());
+        Assert.assertEquals(5, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("output.bin", answer.get(1));
-        Assert.assertEquals("output.bin.idx", answer.get(2));
+        Assert.assertEquals("Mode      Name", answer.get(1));
+        Assert.assertEquals("-f    output.bin", answer.get(2));
+        Assert.assertEquals("-f    output.bin.idx", answer.get(3));
+        Assert.assertEquals("-f    results.bin", answer.get(4));
+
     }
 
 

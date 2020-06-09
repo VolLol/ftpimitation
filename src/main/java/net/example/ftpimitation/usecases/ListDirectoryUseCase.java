@@ -22,7 +22,6 @@ public class ListDirectoryUseCase {
 
 
         if (directory == null || directory.equals("")) {
-            //если пришедшая директория нулевая или равна "" то директория состоит из рут+ текущее местоположение
             resultPath = sessionContext.getRootPath().toString();
 
             Stack<String> tmpAllowedPath = sessionContext.getAllowedPath();
@@ -40,8 +39,15 @@ public class ListDirectoryUseCase {
         result.add("200 Command okay.");
 
         if (resultDir.listFiles().length > 0) {
+            result.add("Mode      Name");
             for (File fileFromDirectory : resultDir.listFiles()) {
-                result.add(fileFromDirectory.getName());
+                if (fileFromDirectory.isDirectory()) {
+                    result.add("-d    " + fileFromDirectory.getName());
+                } else {
+                    result.add("-f    " + fileFromDirectory.getName());
+                }
+
+
             }
         } else {
             result.add("This path is empty");
