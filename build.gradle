@@ -21,8 +21,6 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
-    implementation("com.google.guava:guava:29.0-jre")
-
 }
 
 mainClassName = 'net.example.ftpimitation.FtpServer'

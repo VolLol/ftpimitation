@@ -37,18 +37,18 @@ public class ListDirectoryUseCase {
 
         File resultDir = new File(resultPath);
         result.add("200 Command okay.");
-
         if (resultDir.listFiles().length > 0) {
+            result.add("-----------------");
             result.add("Type      Name");
+            result.add("-----------------");
             for (File fileFromDirectory : resultDir.listFiles()) {
                 if (fileFromDirectory.isDirectory()) {
                     result.add("dir      " + fileFromDirectory.getName());
                 } else {
                     result.add("file      " + fileFromDirectory.getName());
                 }
-
-
             }
+            result.add("-----------------");
         } else {
             result.add("This path is empty");
         }
