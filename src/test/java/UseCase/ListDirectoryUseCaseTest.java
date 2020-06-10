@@ -20,13 +20,13 @@ public class ListDirectoryUseCaseTest {
 
         Assert.assertEquals(8, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("Mode      Name", answer.get(1));
-        Assert.assertEquals("-d    classes", answer.get(2));
-        Assert.assertEquals("-d    generated", answer.get(3));
-        Assert.assertEquals("-d    libs", answer.get(4));
-        Assert.assertEquals("-d    reports", answer.get(5));
-        Assert.assertEquals("-d    test-results", answer.get(6));
-        Assert.assertEquals("-d    tmp", answer.get(7));
+        Assert.assertEquals("Type      Name", answer.get(1));
+        Assert.assertEquals("dir      classes", answer.get(2));
+        Assert.assertEquals("dir      generated", answer.get(3));
+        Assert.assertEquals("dir      libs", answer.get(4));
+        Assert.assertEquals("dir      reports", answer.get(5));
+        Assert.assertEquals("dir      test-results", answer.get(6));
+        Assert.assertEquals("dir      tmp", answer.get(7));
 
     }
 
@@ -42,10 +42,10 @@ public class ListDirectoryUseCaseTest {
 
         Assert.assertEquals(5, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("Mode      Name", answer.get(1));
-        Assert.assertEquals("-d    compileJava", answer.get(2));
-        Assert.assertEquals("-d    compileTestJava", answer.get(3));
-        Assert.assertEquals("-d    jar", answer.get(4));
+        Assert.assertEquals("Type      Name", answer.get(1));
+        Assert.assertEquals("dir      compileJava", answer.get(2));
+        Assert.assertEquals("dir      compileTestJava", answer.get(3));
+        Assert.assertEquals("dir      jar", answer.get(4));
 
     }
 
@@ -60,10 +60,10 @@ public class ListDirectoryUseCaseTest {
 
         Assert.assertEquals(5, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
-        Assert.assertEquals("Mode      Name", answer.get(1));
-        Assert.assertEquals("-f    output.bin", answer.get(2));
-        Assert.assertEquals("-f    output.bin.idx", answer.get(3));
-        Assert.assertEquals("-f    results.bin", answer.get(4));
+        Assert.assertEquals("Type      Name", answer.get(1));
+        Assert.assertEquals("file      output.bin", answer.get(2));
+        Assert.assertEquals("file      output.bin.idx", answer.get(3));
+        Assert.assertEquals("file      results.bin", answer.get(4));
 
     }
 

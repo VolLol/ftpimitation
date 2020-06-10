@@ -39,12 +39,12 @@ public class ListDirectoryUseCase {
         result.add("200 Command okay.");
 
         if (resultDir.listFiles().length > 0) {
-            result.add("Mode      Name");
+            result.add("Type      Name");
             for (File fileFromDirectory : resultDir.listFiles()) {
                 if (fileFromDirectory.isDirectory()) {
-                    result.add("-d    " + fileFromDirectory.getName());
+                    result.add("dir      " + fileFromDirectory.getName());
                 } else {
-                    result.add("-f    " + fileFromDirectory.getName());
+                    result.add("file      " + fileFromDirectory.getName());
                 }
 
 

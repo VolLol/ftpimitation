@@ -27,8 +27,12 @@ public class ChangeDirectoryUseCase {
             directory = directory.substring(1);
         }
 
+        if (directory.equals("")) {
+            sessionContext.getAllowedPath().clear();
+            result.add("250 CWD successful. Current directory: /");
+        }
 
-        if (directory.equals("") || directory.equals("..")) {
+        if (directory.equals("..")) {
             if (!sessionContext.getAllowedPath().isEmpty()) {
                 sessionContext.getAllowedPath().pop();
                 String resultPath = "/";
@@ -74,7 +78,11 @@ public class ChangeDirectoryUseCase {
                 resultPath = resultPath.substring(0, resultPath.length() - 1);
             }
             resultPath = resultPath.replace("//", "/");
-            result.add("250 CWD successful. Current directory: " + resultPath);
+            if (resultPath.equals("/")) {
+                result.add("250 CWD successful. Current directory: /");
+            } else {
+                result.add("250 CWD successful. Current directory: " + resultPath);
+            }
 
 
         }
@@ -88,6 +96,7 @@ public class ChangeDirectoryUseCase {
                 sessionContext.getAllowedPath().clear();
                 result.add("250 CWD successful. Current directory: " + directory);
                 directory = directory.substring(1);
+                directory = directory.replace("//", "/");
                 String[] tmp = directory.split("/");
                 for (String s : tmp) {
                     if (!s.equals("/")) {
@@ -121,6 +130,10 @@ public class ChangeDirectoryUseCase {
                 currentPath = currentPath.replace("//", "/");
                 result.add("250 CWD successful. Current directory: " + currentPath);
 
+                if (directory.startsWith("/")) {
+                    directory = directory.substring(1);
+                }
+
                 String[] arrayPath = directory.split("/");
 
 
@@ -129,7 +142,6 @@ public class ChangeDirectoryUseCase {
                         sessionContext.getAllowedPath().push(s);
                     }
                 }
-
             } else {
                 result.add("550 CWD failed. " + directory + " Directory not found");
             }

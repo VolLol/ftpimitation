@@ -1,0 +1,827 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Develop\ftpimitation
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 120
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 49
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 1019
+    content: "\e[2J\e[?25l\e[m\e[H\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\e[H\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 7
+    content: "\e[?25lWindows PowerShell\e[62X\e[62C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[10X\e[10C\r\n\e[80X\e[80C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[6;1H\e[?25h"
+  - delay: 186
+    content: "\e[?25lPS C:\\Develop\\ftpimitation> \e[?25h"
+  - delay: 2814
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[91m\e[6;27H> \e[m.\e[?25h"
+  - delay: 531
+    content: "\e[?25l\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[6;27H> \e[93m./\e[?25h"
+  - delay: 985
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./b\e[?25h"
+  - delay: 833
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./\e[m \b\e[?25h"
+  - delay: 1089
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./g\e[?25h"
+  - delay: 210
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gr\e[?25h"
+  - delay: 133
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[93m\e[6;29H./gra\e[?25h"
+  - delay: 294
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./grad\e[?25h"
+  - delay: 327
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradl\e[?25h"
+  - delay: 196
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradle\e[?25h"
+  - delay: 188
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradlew\e[?25h"
+  - delay: 445
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradlew\e[m \e[?25h"
+  - delay: 283
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradlew\e[m r\e[?25h"
+  - delay: 151
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;29H./gradlew\e[m ru\e[?25h"
+  - delay: 228
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;29H./gradlew\e[m run\e[?25h"
+  - delay: 317
+    content: "\e[?25l\r\n\e[?25h"
+  - delay: 24
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[7;1H\e[?25h"
+  - delay: 12
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[7;1H\e[?25h"
+  - delay: 137
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[7;1H\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[7;1H\e[?25h"
+  - delay: 995
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[7;1H\e[?25h"
+  - delay: 836
+    content: "\e[?25l\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<-------------> 0% CONFIGURING [0s]\r\n> root project\e[m\e[21X\e[21C\r\n\e[?25h"
+  - delay: 89
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [0s]\e[m\e[86X\e[86C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 889
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [1s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [2s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [3s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [4s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [5s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [6s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [7s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [8s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m=========\e[97m----> 75% EXECUTING [9s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 597
+    content: "\e[?25l\e[7;1H\e[120X\e[120C\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[1m\e[97m> Task :run\e[m\e[109X\e[109C\r\n[/0:0:0:0:0:0:0:1:61121] connected\e[86X\e[86C\r\n[/0:0:0:0:0:0:0:1:61121] ready for commands\e[77X\e[77C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [9s]\e[m\e[86X\e[86C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 386
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m=========\e[97m----> 75% EXECUTING [10s]\e[13;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m=========\e[97m----> 75% EXECUTING [11s]\e[13;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m=========\e[97m----> 75% EXECUTING [12s]\e[13;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m=========\e[97m----> 75% EXECUTING [13s]\e[13;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m=========\e[97m----> 75% EXECUTING [14s]\e[13;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 293
+    content: "\e[?25l\e[11;1H[/0:0:0:0:0:0:0:1:61121] user send data = ls\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [14s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 689
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [15s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [16s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [17s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [18s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [19s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 988
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [20s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [21s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [22s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [23s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [24s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [25s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 1005
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [26s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 980
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [27s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [28s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [29s]\e[15;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[13;1H<\e[92m=========\e[97m----> 75% EXECUTING [30s]\e[15;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 391
+    content: "\e[?25l\e[13;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd classes\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [30s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 591
+    content: "\e[?25l\e[1m\e[97m\e[15;1H<\e[92m=========\e[97m----> 75% EXECUTING [31s]\e[17;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[15;1H<\e[92m=========\e[97m----> 75% EXECUTING [32s]\e[17;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[15;1H<\e[92m=========\e[97m----> 75% EXECUTING [33s]\e[17;1H\e[?25h"
+  - delay: 10
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[15;1H[/0:0:0:0:0:0:0:1:61121] user send data = ls\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [34s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 995
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [35s]\e[19;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 988
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [36s]\e[19;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [37s]\e[19;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [38s]\e[19;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [39s]\e[19;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[17;1H<\e[92m=========\e[97m----> 75% EXECUTING [40s]\e[19;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 791
+    content: "\e[?25l\e[17;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd java\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [40s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 190
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m=========\e[97m----> 75% EXECUTING [41s]\e[21;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m=========\e[97m----> 75% EXECUTING [42s]\e[21;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m=========\e[97m----> 75% EXECUTING [43s]\e[21;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m=========\e[97m----> 75% EXECUTING [44s]\e[21;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 491
+    content: "\e[?25l\e[19;1H[/0:0:0:0:0:0:0:1:61121] user send data = ls\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [44s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 492
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [45s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [46s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [47s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [48s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [49s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [50s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [51s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [52s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [53s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m=========\e[97m----> 75% EXECUTING [54s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 492
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd test\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [54s]\e[m\e[85X\e[85C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 490
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [55s]\e[25;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [56s]\e[25;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [57s]\e[25;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [58s]\e[25;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [59s]\e[25;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 0s]\e[25;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[23;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 1s]\e[25;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[23;1H[/0:0:0:0:0:0:0:1:61121] user send data = ls\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 2s]\e[m\e[83X\e[83C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 3s]\e[27;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 4s]\e[27;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 5s]\e[27;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 6s]\e[27;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 7s]\e[27;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 8s]\e[27;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 9s]\e[27;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[25;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 10s]\e[27;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 892
+    content: "\e[?25l\e[25;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd commands\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 10s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 92
+    content: "\e[?25l\e[1m\e[97m\e[27;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 11s]\e[29;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[27;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 12s]\e[29;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[27;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 13s]\e[29;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[27;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 14s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[29;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 15s]\e[31;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[29;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 16s]\e[31;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[29;1H[/0:0:0:0:0:0:0:1:61121] user send data = pwd\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 17s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 18s]\e[33;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 19s]\e[33;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 20s]\e[33;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 21s]\e[33;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 22s]\e[33;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 23s]\e[33;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[31;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 24s]\e[33;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[31;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 25s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 26s]\e[35;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 27s]\e[35;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 28s]\e[35;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 29s]\e[35;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 30s]\e[35;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 31s]\e[35;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 32s]\e[35;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[33;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 33s]\e[35;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 191
+    content: "\e[?25l\e[33;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../../../\r\n\e[?25h"
+  - delay: 10
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 33s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 791
+    content: "\e[?25l\e[1m\e[97m\e[35;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 34s]\e[37;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[35;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 35s]\e[37;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[35;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 36s]\e[37;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 690
+    content: "\e[?25l\e[35;1H[/0:0:0:0:0:0:0:1:61121] user send data = pwd\r\n\e[?25h"
+  - delay: 10
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 36s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 291
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 37s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 38s]\e[39;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 39s]\e[39;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 40s]\e[39;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 41s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 42s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 43s]\e[39;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 44s]\e[39;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 45s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 46s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[37;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 47s]\e[39;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 292
+    content: "\e[?25l\e[37;1H[/0:0:0:0:0:0:0:1:61121] user send data = cd tmp\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 47s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 692
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 48s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 49s]\e[41;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 50s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 51s]\e[41;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 52s]\e[41;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 53s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 54s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 55s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[39;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 56s]\e[41;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 592
+    content: "\e[?25l\e[39;1H[/0:0:0:0:0:0:0:1:61121] user send data = pwd\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [1m 56s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 393
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 57s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 58s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [1m 59s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 0s]\e[m\e[83X\e[83C\e[43;1H\e[?25h"
+  - delay: 1000
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 1s]\e[43;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 2s]\e[43;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 3s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 4s]\e[43;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 5s]\e[43;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 6s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 7s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 8s]\e[43;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[41;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 9s]\e[43;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 691
+    content: "\e[?25l\e[41;1H[/0:0:0:0:0:0:0:1:61121] user send datauite\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] ERR unknown command\e[76X\e[76C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 9s]\e[m\e[83X\e[83C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 292
+    content: "\e[?25l\e[1m\e[97m\e[43;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 10s]\e[45;1H\e[?25h"
+  - delay: 7
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[43;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 11s]\e[45;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 490
+    content: "\e[?25l\e[43;1H[/0:0:0:0:0:0:0:1:61121] user send data = quit\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:61121] execute QuitUseCase\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] Stream closed\e[82X\e[82C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 11s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[?25h"
+  - delay: 491
+    content: "\e[?25l\e[1m\e[97m\e[46;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 12s]\e[48;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[46;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 13s]\e[48;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 995
+    content: "\e[?25l\e[1m\e[97m\e[46;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 14s]\e[48;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 987
+    content: "\e[?25l\e[1m\e[97m\e[46;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 15s]\e[48;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[46;1H<\e[92m=========\e[97m----> 75% EXECUTING [2m 16s]\e[48;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 869
+    content: "\e[?25l\e[?25h"
+  - delay: 361
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\e[1m\e[97m\r\n> Task :run\e[m\e[109X\e[109C\r\n[/0:0:0:0:0:0:0:1:61121] connected\e[86X\e[86C\r\n[/0:0:0:0:0:0:0:1:61121] ready for commands\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd classes\e[68X\e[68C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd java\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd test\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd commands\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../../../\e[63X\e[63C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd tmp\e[72X\e[72C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send datauite\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] ERR unknown command\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = quit\e[74X\e[74C\r\n[/0:0:0:0:0:0:0:1:61121] execute QuitUseCase\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] Stream closed\e[82X\e[82C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 16s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\n\e[120X\e[120C\r\n\e[120X\e[120C\e[48;1H\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[HWindows PowerShell\e[102X\e[102C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\e[1m\e[97m\r\n> Task :run\e[m\e[109X\e[109C\r\n[/0:0:0:0:0:0:0:1:61121] connected\e[86X\e[86C\r\n[/0:0:0:0:0:0:0:1:61121] ready for commands\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd classes\e[68X\e[68C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd java\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd test\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd commands\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../../../\e[63X\e[63C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd tmp\e[72X\e[72C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send datauite\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] ERR unknown command\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = quit\e[74X\e[74C\r\n[/0:0:0:0:0:0:0:1:61121] execute QuitUseCase\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] Stream closed\e[82X\e[82C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 16s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\nЗавершить выполнение пакетного файла [Y(да)/N(нет)]?\e[68X\e[68C\r\n\e[120X\e[120C\e[48;54H\e[?25h"
+  - delay: 1092
+    content: 'y'
+  - delay: 326
+    content: "\e[?25l\r\n\e[?25h"
+  - delay: 26
+    content: "\e[?25lPS C:\\Develop\\ftpimitation> \e[?25h"
+  - delay: 514
+    content: "\e[?25l\e[H(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[50X\e[50C\r\n\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\e[1m\e[97m\r\n> Task :run\e[m\e[109X\e[109C\r\n[/0:0:0:0:0:0:0:1:61121] connected\e[86X\e[86C\r\n[/0:0:0:0:0:0:0:1:61121] ready for commands\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd classes\e[68X\e[68C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd java\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd test\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd commands\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../../../\e[63X\e[63C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd tmp\e[72X\e[72C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send datauite\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] ERR unknown command\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = quit\e[74X\e[74C\r\n[/0:0:0:0:0:0:0:1:61121] execute QuitUseCase\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] Stream closed\e[82X\e[82C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 16s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\nЗавершить выполнение пакетного файла [Y(да)/N(нет)]? y\e[66X\e[66C\r\nPS C:\\Develop\\ftpimitation>\e[93X\e[93C\r\n\e[120X\e[120C\e[49;29H\e[?25h"
+  - delay: 6
+    content: "\e[?25l\rPS C:\\Develop\\ftpimitation> \e[?25h"
+  - delay: 2522
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[93me"
+  - delay: 269
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\bex\e[?25h"
+  - delay: 301
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[49;29Hexi\e[?25h"
+  - delay: 171
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[92m\e[49;29Hexit\e[?25h"
+  - delay: 180
+    content: "\e[?25l\e[m\e[H\e[120X\e[120C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[40X\e[40C\r\n\e[120X\e[120C\r\nPS C:\\Develop\\ftpimitation> \e[93m./gradlew\e[m run\e[79X\e[79C\r\n\e[120X\e[120C\e[1m\e[97m\r\n> Task :run\e[m\e[109X\e[109C\r\n[/0:0:0:0:0:0:0:1:61121] connected\e[86X\e[86C\r\n[/0:0:0:0:0:0:0:1:61121] ready for commands\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd classes\e[68X\e[68C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd java\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd test\e[71X\e[71C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = ls\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ListDirectoryUseCase\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd commands\e[67X\e[67C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd ../../../../\e[63X\e[63C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = cd tmp\e[72X\e[72C\r\n[/0:0:0:0:0:0:0:1:61121] execute ChangeDirectoryUseCase\e[65X\e[65C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = pwd\e[75X\e[75C\r\n[/0:0:0:0:0:0:0:1:61121] execute ShowCurrentUseCase\e[69X\e[69C\r\n[/0:0:0:0:0:0:0:1:61121] user send datauite\e[77X\e[77C\r\n[/0:0:0:0:0:0:0:1:61121] ERR unknown command\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] user send data = quit\e[74X\e[74C\r\n[/0:0:0:0:0:0:0:1:61121] execute QuitUseCase\e[76X\e[76C\r\n[/0:0:0:0:0:0:0:1:61121] Stream closed\e[82X\e[82C\e[1m\e[97m\r\n<\e[92m=========\e[97m----> 75% EXECUTING [2m 16s]\e[m\e[82X\e[82C\e[1m\e[97m\r\n> :run\e[m\e[114X\e[114C\r\nЗавершить выполнение пакетного файла [Y(да)/N(нет)]? y\e[66X\e[66C\r\nPS C:\\Develop\\ftpimitation>\e[93X\e[93C\r\nPS C:\\Develop\\ftpimitation> \e[92mexit\e[m\e[88X\e[88C\r\n\e[120X\e[120C\e[49;33H\e[?25h"
+  - delay: 6
+    content: "\e[?25l\r\e[?25h"

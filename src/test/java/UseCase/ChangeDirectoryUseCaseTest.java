@@ -20,7 +20,7 @@ public class ChangeDirectoryUseCaseTest {
         List<String> answer = changeDirectoryUseCase.execute("");
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("250 CWD successful. Current directory: /tmp", answer.get(0));
+        Assert.assertEquals("250 CWD successful. Current directory: /", answer.get(0));
 
     }
 
