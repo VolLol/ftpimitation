@@ -29,10 +29,10 @@ public class HelpUseCase {
         if (command.equals("help")) {
             result.add("-This command show you information about all commands");
         }
-        if (command.equals("list")) {
+        if (command.equals("ls")) {
             result.add("-This command show content of directory");
         }
-        if (command.equals("scd")) {
+        if (command.equals("pwd")) {
             result.add("-This command show current directory");
         }
         if (command.equals("cd")) {
@@ -46,8 +46,8 @@ public class HelpUseCase {
         table.add("Command|   args   |description");
         table.add("------------------------------------");
         table.add("quit   |          |Quit from server");
-        table.add("help   |[command] |Return information about command, args optimal");
-        table.add("ls     |  [dir]   |Return content of folder,args optimal");
+        table.add("help   |[command] |Return information about command, args optional");
+        table.add("ls     |   [dir]  |Return content of folder,args optimal");
         table.add("pwd    |          |Return current directory");
         table.add("cd     |   [dir]  |Change current directory, args required");
         return table;

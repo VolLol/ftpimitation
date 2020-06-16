@@ -1,6 +1,7 @@
 package net.example.ftpimitation;
 
 import net.example.ftpimitation.commands.*;
+import net.example.ftpimitation.exception.UnknownCommand;
 import net.example.ftpimitation.usecases.*;
 
 import java.io.BufferedReader;
@@ -65,18 +66,18 @@ public class FtpProcessor {
                 }
                 for (String data : outBuffer) {
                     socketOut.println(data);
-                    if (command instanceof QuitCommand) {
-                        socketIn.close();
-                        socketOut.close();
-                    }
                 }
 
+                if (command instanceof QuitCommand){
+                    throw new IOException();
+                }
 
-            } catch (Exception e) {
-                System.err.println("[" + sessionContext.getClientIp() + "]" + " ERR unknown command ");
-                socketOut.println("-ERR unknown command");
+            } catch (UnknownCommand e) {
+                System.err.println("[" + sessionContext.getClientIp() + "]" + " unknown command ");
+                socketOut.println("Error incorrect command");
+            } finally {
+                socketOut.flush();
             }
-            socketOut.flush();
 
         }
 

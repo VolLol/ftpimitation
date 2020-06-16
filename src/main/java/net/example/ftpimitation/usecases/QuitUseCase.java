@@ -19,8 +19,6 @@ public class QuitUseCase {
         System.out.println("[" + sessionContext.getClientIp() + "] " + "execute QuitUseCase");
         ArrayList<String> result = new ArrayList<>();
         result.add("221 Goodbye, closing session ");
-
-        //прокить исключение
         return result;
     }
 }

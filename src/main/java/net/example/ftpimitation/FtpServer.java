@@ -1,8 +1,5 @@
 package net.example.ftpimitation;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -21,12 +18,9 @@ public class FtpServer {
                 clientIp = clientSocket.getRemoteSocketAddress().toString();
                 System.out.println("[" + clientIp + "] connected");
 
-                BufferedReader socketIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                PrintWriter socketOut = new PrintWriter(clientSocket.getOutputStream(), false);
-
-                SessionContext sessionContext = new SessionContext(clientIp);
-                FtpProcessor ftpProcessor = new FtpProcessor(socketIn, socketOut, sessionContext);
-                ftpProcessor.execute();
+                ServerThread serverThread = new ServerThread(clientSocket);
+                serverThread.setName(clientIp);
+                serverThread.start();
 
             } catch (Exception e) {
                 if (clientSocket != null) {
