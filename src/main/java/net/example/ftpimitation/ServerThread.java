@@ -24,6 +24,9 @@ public class ServerThread extends Thread {
     public void run() {
         System.out.println("[" + clientIp + "] thread start works");
 
+        FtpAuthProcessor ftpAuthProcessor = new FtpAuthProcessor(socketIn, socketOut, sessionContext);
+        ftpAuthProcessor.execute();
+
         FtpProcessor ftpProcessor = new FtpProcessor(socketIn, socketOut, sessionContext);
         try {
             ftpProcessor.execute();

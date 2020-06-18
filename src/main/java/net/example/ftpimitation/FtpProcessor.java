@@ -68,13 +68,14 @@ public class FtpProcessor {
                     socketOut.println(data);
                 }
 
-                if (command instanceof QuitCommand){
+                if (command instanceof QuitCommand) {
                     throw new IOException();
                 }
 
             } catch (UnknownCommand e) {
                 System.err.println("[" + sessionContext.getClientIp() + "]" + " unknown command ");
                 socketOut.println("Error incorrect command");
+
             } finally {
                 socketOut.flush();
             }
