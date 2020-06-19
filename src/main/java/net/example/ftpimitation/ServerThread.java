@@ -31,7 +31,7 @@ public class ServerThread extends Thread {
         try {
             ftpProcessor.execute();
         } catch (IOException e) {
-            System.out.println("[" + clientIp + "] client stop working");
+            System.out.println("[" + clientIp + "] finish working");
         } finally {
             disconnect();
         }
