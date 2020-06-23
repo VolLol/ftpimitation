@@ -114,4 +114,14 @@ public class CommandParserTest {
         Assert.assertEquals(exciting.getCommandType(), changeDirectoryCommand.getCommandType());
     }
 
+
+    @Test
+    public void correctQuitCommand() {
+        QuitCommand quitCommand = new QuitCommand();
+        CommandParser commandParser = new CommandParser();
+        Command exciting = commandParser.parser("quit");
+
+        Assert.assertEquals(exciting.getCommandType(), quitCommand.getCommandType());
+
+    }
 }

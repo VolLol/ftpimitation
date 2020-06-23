@@ -2,8 +2,6 @@ package UseCase;
 
 import lombok.SneakyThrows;
 import net.example.ftpimitation.SessionContext;
-import net.example.ftpimitation.exception.IncorrectPasswordException;
-import net.example.ftpimitation.exception.UserNotExistException;
 import net.example.ftpimitation.usecases.AuthUseCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,28 +19,35 @@ public class AuthUseCaseTest {
 
         List result = authUseCase.execute("user1", "pass1");
 
-        Assert.assertEquals(2, result.size());
+        Assert.assertEquals(0, result.size());
+
     }
 
     @SneakyThrows
-    @Test(expected = UserNotExistException.class)
+    @Test
     public void incorrectUsername() {
         String clientIp = "clientIp";
         SessionContext sessionContext = new SessionContext(clientIp);
         AuthUseCase authUseCase = new AuthUseCase(sessionContext);
 
-        authUseCase.execute("jjjjjjj", "pass1");
+        List result = authUseCase.execute("jjjjjjj", "pass1");
+
+        Assert.assertEquals(1, result.size());
+        Assert.assertEquals("User not exist", result.get(0));
     }
 
 
-    @SneakyThrows
-    @Test(expected = IncorrectPasswordException.class)
+    @Test
     public void incorrectPassword() {
         String clientIp = "clientIp";
         SessionContext sessionContext = new SessionContext(clientIp);
         AuthUseCase authUseCase = new AuthUseCase(sessionContext);
 
-        authUseCase.execute("user2", "ksdjvblakjsbnv;/QWMKL");
+        List result = authUseCase.execute("user2", "ksdjvblakjsbnv;/QWMKL");
+
+        Assert.assertEquals(1, result.size());
+        Assert.assertEquals("Incorrect password", result.get(0));
+
     }
 
 }

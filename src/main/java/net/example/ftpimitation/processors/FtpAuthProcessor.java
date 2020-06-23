@@ -1,7 +1,6 @@
-package net.example.ftpimitation;
+package net.example.ftpimitation.processors;
 
-import net.example.ftpimitation.exception.IncorrectPasswordException;
-import net.example.ftpimitation.exception.UserNotExistException;
+import net.example.ftpimitation.SessionContext;
 import net.example.ftpimitation.usecases.AuthUseCase;
 
 import java.io.BufferedReader;
@@ -28,23 +27,20 @@ public class FtpAuthProcessor {
         socketOut.flush();
         AuthUseCase authUseCase = new AuthUseCase(sessionContext);
         boolean authCorrect = false;
+        List<String> answer;
         while (!authCorrect) {
-            try {
-                List answer = authUseCase.execute(receivingData("username"), receivingData("password"));
-                if (answer.size() == 2) {
-                    authCorrect = true;
+            answer = authUseCase.execute
+                    (receivingData("username"), receivingData("password"));
+            if (answer.size() == 0) {
+                authCorrect = true;
+            } else {
+                for (String s : answer) {
+                    socketOut.println(s);
                 }
-            } catch (UserNotExistException e) {
-                System.out.println("[" + sessionContext.getClientIp() + "] write incorrect username");
-                socketOut.println("User not exist");
-                socketOut.flush();
-            } catch (IncorrectPasswordException e) {
-                System.out.println("[" + sessionContext.getClientIp() + "] write incorrect password");
-                socketOut.println("Incorrect password");
-                socketOut.flush();
             }
-
         }
+
+
         System.out.println("[" + sessionContext.getClientIp() + "] client finish authentication");
     }
 

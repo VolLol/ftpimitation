@@ -1,8 +1,7 @@
 package net.example.ftpimitation.usecases;
 
 import net.example.ftpimitation.SessionContext;
-import net.example.ftpimitation.UserEntity;
-import net.example.ftpimitation.UserRepository;
+import net.example.ftpimitation.repository.UserRepository;
 import net.example.ftpimitation.exception.IncorrectPasswordException;
 import net.example.ftpimitation.exception.UserNotExistException;
 
@@ -16,28 +15,23 @@ public class AuthUseCase {
 
     public AuthUseCase(SessionContext sessionContext) {
         this.sessionContext = sessionContext;
-        this.userRepository = new UserRepository();
+        this.userRepository = new UserRepository(sessionContext);
     }
 
-    public List execute(String username, String password) throws UserNotExistException, IncorrectPasswordException {
+    public List<String> execute(String username, String password) {
         List<String> answer = new ArrayList<>();
         System.out.println("[" + sessionContext.getClientIp() + "] execute AuthUseCase");
 
-        UserEntity user = userRepository.findByUsername(username);
-
-        if (user != null) {
-            System.out.println("[" + sessionContext.getClientIp() + "] write correct username");
-            answer.add("");
-        } else {
-            throw new UserNotExistException();
+        try {
+            userRepository.checkUsernameAndPassword(username, password);
+        } catch (UserNotExistException e) {
+            System.out.println("[" + sessionContext.getClientIp() + "] write incorrect username");
+            answer.add("User not exist");
+        } catch (IncorrectPasswordException e) {
+            System.out.println("[" + sessionContext.getClientIp() + "] write incorrect password");
+            answer.add("Incorrect password");
         }
 
-        if (user.getCleanPassword().equals(password)) {
-            System.out.println("[" + sessionContext.getClientIp() + "] write correct password");
-            answer.add("");
-        } else {
-            throw new IncorrectPasswordException();
-        }
         return answer;
     }
 }

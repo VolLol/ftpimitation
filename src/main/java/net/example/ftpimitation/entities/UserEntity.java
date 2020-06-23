@@ -1,4 +1,4 @@
-package net.example.ftpimitation;
+package net.example.ftpimitation.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
