@@ -1,6 +1,7 @@
 package net.example.ftpimitation.usecases;
 
 import net.example.ftpimitation.SessionContext;
+import net.example.ftpimitation.exception.ProblemConnectionToDatabaseException;
 import net.example.ftpimitation.repository.UserRepository;
 import net.example.ftpimitation.exception.IncorrectPasswordException;
 import net.example.ftpimitation.exception.UserNotExistException;
@@ -30,6 +31,9 @@ public class AuthUseCase {
         } catch (IncorrectPasswordException e) {
             System.out.println("[" + sessionContext.getClientIp() + "] write incorrect password");
             answer.add("Incorrect password");
+        } catch (ProblemConnectionToDatabaseException e) {
+            System.out.println("[" + sessionContext.getClientIp() + "] write incorrect password");
+            answer.add("Problem with database");
         }
 
         return answer;
