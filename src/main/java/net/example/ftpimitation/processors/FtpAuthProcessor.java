@@ -39,8 +39,6 @@ public class FtpAuthProcessor {
                 }
             }
         }
-
-
         System.out.println("[" + sessionContext.getClientIp() + "] client finish authentication");
     }
 
