@@ -6,6 +6,10 @@ public class IncorrectPasswordException extends Throwable {
         super();
     }
 
+    public IncorrectPasswordException(String message) {
+        super(message);
+    }
+
     public IncorrectPasswordException(Throwable e) {
         super(e);
     }

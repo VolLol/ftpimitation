@@ -1,53 +1,76 @@
 package UseCase;
 
-import lombok.SneakyThrows;
-import net.example.ftpimitation.SessionContext;
+import net.example.ftpimitation.entities.UserEntity;
+import net.example.ftpimitation.exception.ProblemConnectionToDatabaseException;
+import net.example.ftpimitation.exception.UserNotExistException;
+import net.example.ftpimitation.repository.UserRepository;
+import net.example.ftpimitation.utils.SessionContext;
 import net.example.ftpimitation.usecases.AuthUseCase;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
-import java.util.List;
+import java.sql.SQLException;
+
 
 public class AuthUseCaseTest {
 
-    @SneakyThrows
-    @Test
-    public void correctUsernameAndPassword() {
-        String clientIp = "clientIp";
-        SessionContext sessionContext = new SessionContext(clientIp);
-        AuthUseCase authUseCase = new AuthUseCase(sessionContext);
+    private String clientIp;
+    private SessionContext sessionContext;
+    private AuthUseCase authUseCase;
 
-        List result = authUseCase.execute("user1", "pass1");
+    @Mock
+    private UserRepository mockUserRepository;
 
-        Assert.assertEquals(0, result.size());
-
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        clientIp = "clientIp";
+        sessionContext = new SessionContext(clientIp);
+        authUseCase = new AuthUseCase(sessionContext, mockUserRepository);
     }
 
-    @SneakyThrows
+    private UserEntity createUser(String username, String cleanPassword) {
+        UserEntity user = UserEntity.builder().id(1L).username(username).cleanPassword(cleanPassword).build();
+        return user;
+    }
+
     @Test
-    public void incorrectUsername() {
-        String clientIp = "clientIp";
-        SessionContext sessionContext = new SessionContext(clientIp);
-        AuthUseCase authUseCase = new AuthUseCase(sessionContext);
+    public void correctUsernameAndPassword() throws UserNotExistException, ProblemConnectionToDatabaseException, SQLException {
+        Mockito.when(mockUserRepository.findUserByUsername("user1")).thenReturn(createUser("user1", "pass1"));
 
-        List result = authUseCase.execute("jjjjjjj", "pass1");
+        ImmutablePair<String, Boolean> result = authUseCase.execute("user1", "pass1");
+        Mockito.verify(mockUserRepository).findUserByUsername("user1");
 
-        Assert.assertEquals(1, result.size());
-        Assert.assertEquals("User not exist", result.get(0));
+        Assert.assertEquals("Successful authentication", result.left);
+        Assert.assertEquals(true, result.right);
+    }
+
+    @Test
+    public void incorrectUsername() throws UserNotExistException, ProblemConnectionToDatabaseException {
+        Mockito.when(mockUserRepository.findUserByUsername("user1")).thenReturn(createUser("user1", "pass1"));
+
+        ImmutablePair<String, Boolean> result = authUseCase.execute("incorrect username", "pass");
+
+        Mockito.verify(mockUserRepository).findUserByUsername("incorrect username");
+        Assert.assertEquals("Incorrect username", result.left);
+        Assert.assertEquals(false, result.right);
     }
 
 
     @Test
-    public void incorrectPassword() {
-        String clientIp = "clientIp";
-        SessionContext sessionContext = new SessionContext(clientIp);
-        AuthUseCase authUseCase = new AuthUseCase(sessionContext);
+    public void incorrectPassword() throws UserNotExistException, ProblemConnectionToDatabaseException {
+        Mockito.when(mockUserRepository.findUserByUsername("user1")).thenReturn(createUser("user1", "pass1"));
 
-        List result = authUseCase.execute("user2", "ksdjvblakjsbnv;/QWMKL");
+        ImmutablePair<String, Boolean> result = authUseCase.execute("user1", "incorrect password");
 
-        Assert.assertEquals(1, result.size());
-        Assert.assertEquals("Incorrect password", result.get(0));
-
+        Mockito.verify(mockUserRepository).findUserByUsername("user1");
+        Assert.assertEquals("Incorrect password", result.left);
+        Assert.assertEquals(false, result.right);
     }
 
 }

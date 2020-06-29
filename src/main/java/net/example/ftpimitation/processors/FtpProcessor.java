@@ -1,7 +1,7 @@
 package net.example.ftpimitation.processors;
 
-import net.example.ftpimitation.CommandParser;
-import net.example.ftpimitation.SessionContext;
+import net.example.ftpimitation.utils.CommandParser;
+import net.example.ftpimitation.utils.SessionContext;
 import net.example.ftpimitation.commands.*;
 import net.example.ftpimitation.exception.UnknownCommand;
 import net.example.ftpimitation.usecases.*;

@@ -1,6 +1,6 @@
 package net.example.ftpimitation.usecases;
 
-import net.example.ftpimitation.SessionContext;
+import net.example.ftpimitation.utils.SessionContext;
 
 import java.util.ArrayList;
 import java.util.List;

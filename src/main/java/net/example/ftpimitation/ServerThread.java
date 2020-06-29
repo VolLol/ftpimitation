@@ -2,6 +2,7 @@ package net.example.ftpimitation;
 
 import net.example.ftpimitation.processors.FtpAuthProcessor;
 import net.example.ftpimitation.processors.FtpProcessor;
+import net.example.ftpimitation.utils.SessionContext;
 
 import java.io.BufferedReader;
 import java.io.IOException;

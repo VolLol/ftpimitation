@@ -8,4 +8,9 @@ public class UserNotExistException extends Throwable {
     public UserNotExistException(Throwable cause) {
         super(cause);
     }
+
+    public UserNotExistException(String message) {
+        super(message);
+
+    }
 }

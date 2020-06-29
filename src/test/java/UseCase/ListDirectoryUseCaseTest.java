@@ -1,6 +1,6 @@
 package UseCase;
 
-import net.example.ftpimitation.SessionContext;
+import net.example.ftpimitation.utils.SessionContext;
 import net.example.ftpimitation.usecases.ListDirectoryUseCase;
 import org.junit.Assert;
 import org.junit.Test;

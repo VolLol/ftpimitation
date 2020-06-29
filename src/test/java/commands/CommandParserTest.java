@@ -1,6 +1,6 @@
 package commands;
 
-import net.example.ftpimitation.CommandParser;
+import net.example.ftpimitation.utils.CommandParser;
 import net.example.ftpimitation.commands.*;
 import org.junit.Assert;
 import org.junit.Test;
