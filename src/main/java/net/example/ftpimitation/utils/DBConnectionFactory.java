@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnectionFactory {
-    private static final String DB_NAME = "postgres";
+    private static final String DB_NAME = "ftpimitationdb";
     private static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/" + DB_NAME;
     private static final String USER = "postgres";
     private static final String PASS = "password";

@@ -3,7 +3,6 @@ package net.example.ftpimitation.repository;
 import net.example.ftpimitation.utils.SessionContext;
 import net.example.ftpimitation.entities.UserEntity;
 import net.example.ftpimitation.exception.ProblemConnectionToDatabaseException;
-import net.example.ftpimitation.exception.UserNotExistException;
 import net.example.ftpimitation.utils.DBConnectionFactory;
 
 import java.sql.*;
@@ -16,7 +15,7 @@ public class UserRepository {
         this.sessionContext = sessionContext;
     }
 
-    public UserEntity findUserByUsername(String username) throws UserNotExistException, ProblemConnectionToDatabaseException {
+    public UserEntity findUserByUsername(String username) throws ProblemConnectionToDatabaseException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         UserEntity user = null;
@@ -33,22 +32,11 @@ public class UserRepository {
                         .cleanPassword(resultSetCheckUserExist.getString(3))
                         .build();
             }
+            preparedStatement.close();
+            connection.close();
             return user;
         } catch (SQLException e) {
-            throw new UserNotExistException(e);
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (SQLException e) {
-                throw new ProblemConnectionToDatabaseException("Problem with preparedStatement to database ", e);
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    throw new ProblemConnectionToDatabaseException("Problem with close connection to database", e);
-                }
-            }
+            throw new ProblemConnectionToDatabaseException("Problem execute SQL query", e);
         }
     }
 }

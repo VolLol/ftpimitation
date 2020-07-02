@@ -8,6 +8,7 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class FtpAuthProcessor {
 
@@ -26,13 +27,17 @@ public class FtpAuthProcessor {
         socketOut.println("Welcome to ftp server!");
         socketOut.flush();
         AuthUseCase authUseCase = new AuthUseCase(sessionContext, new UserRepository(sessionContext));
-        ImmutablePair<String, Boolean> answer = new ImmutablePair<>("", false);
-        while (!answer.getValue()) {
-            answer = authUseCase.execute
-                    (receivingData("username"), receivingData("password"));
-            socketOut.println(answer.getKey());
-        }
-        System.out.println("[" + sessionContext.getClientIp() + "] client finish authentication");
+        ImmutablePair<List<String>, Boolean> usecaseResult = null;
+        do {
+            String username = receivingData("username");
+            String password = receivingData("password");
+            usecaseResult = authUseCase.execute(username, password);
+            for (String data : usecaseResult.left) {
+                socketOut.println(data);
+            }
+            socketOut.flush();
+        } while (!usecaseResult.right);
+        System.out.println("[" + sessionContext.getClientIp() + "] client successful authentication");
     }
 
     private String receivingData(String dataName) {

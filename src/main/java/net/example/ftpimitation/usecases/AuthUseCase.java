@@ -1,12 +1,13 @@
 package net.example.ftpimitation.usecases;
 
 import net.example.ftpimitation.entities.UserEntity;
-import net.example.ftpimitation.exception.IncorrectPasswordException;
 import net.example.ftpimitation.exception.ProblemConnectionToDatabaseException;
-import net.example.ftpimitation.exception.UserNotExistException;
 import net.example.ftpimitation.repository.UserRepository;
 import net.example.ftpimitation.utils.SessionContext;
 import org.apache.commons.lang3.tuple.ImmutablePair;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AuthUseCase {
 
@@ -18,29 +19,21 @@ public class AuthUseCase {
         this.userRepository = userRepository;
     }
 
-    public ImmutablePair<String, Boolean> execute(String username, String password) {
+    public ImmutablePair<List<String>, Boolean> execute(String username, String password) {
         System.out.println("[" + sessionContext.getClientIp() + "] execute AuthUseCase");
-        ImmutablePair<String, Boolean> answer = null;
+        ArrayList<String> answer = new ArrayList<>();
         try {
             UserEntity userFromDb = userRepository.findUserByUsername(username);
-            if (userFromDb == null) {
-                throw new UserNotExistException("User not exist");
+            if (userFromDb == null || !userFromDb.getCleanPassword().equals(password)) {
+                answer.add("Incorrect user or password");
+                return new ImmutablePair<>(answer, false);
             }
-            if (!userFromDb.getCleanPassword().equals(password)) {
-                throw new IncorrectPasswordException("Incorrect password");
-            } else {
-                answer = new ImmutablePair<>("Successful authentication", true);
-            }
-
-        } catch (UserNotExistException e) {
-            System.out.println("[" + sessionContext.getClientIp() + "] write incorrect username");
-            answer = new ImmutablePair<>("Incorrect username", false);
-        } catch (IncorrectPasswordException e) {
-            System.out.println("[" + sessionContext.getClientIp() + "] write incorrect password");
-            answer = new ImmutablePair<>("Incorrect password", false);
+            answer.add("Successful authentication");
+            return new ImmutablePair<>(answer, true);
         } catch (ProblemConnectionToDatabaseException e) {
-            System.out.println(("[" + sessionContext.getClientIp() + "] Problem with database"));
+            System.out.println(("[" + sessionContext.getClientIp() + "] problem connection to database"));
+            answer.add("Incorrect user or password");
         }
-        return answer;
+        return new ImmutablePair<>(answer, false);
     }
 }
