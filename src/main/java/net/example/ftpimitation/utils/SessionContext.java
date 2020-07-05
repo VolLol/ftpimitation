@@ -22,7 +22,7 @@ public class SessionContext {
 
     public SessionContext(String clientIp) {
         this.clientIp = clientIp;
-        this.rootPath = Paths.get("C:/Develop/ftpimitation/build");
+        this.rootPath = Paths.get(System.getProperty("user.dir") +"/build");
         this.allowedPath = new Stack<>();
     }
 }

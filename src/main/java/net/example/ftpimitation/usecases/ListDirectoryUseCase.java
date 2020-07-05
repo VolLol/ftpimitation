@@ -5,6 +5,7 @@ import net.example.ftpimitation.utils.SessionContext;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Stack;
 
 public class ListDirectoryUseCase {
@@ -17,42 +18,47 @@ public class ListDirectoryUseCase {
 
     public List<String> execute(String directory) {
         System.out.println("[" + sessionContext.getClientIp() + "] " + "execute ListDirectoryUseCase");
-        List<String> result = new ArrayList<>();
-        String resultPath;
-
-
-        if (directory == null || directory.equals("")) {
-            resultPath = sessionContext.getRootPath().toString();
-
-            Stack<String> tmpAllowedPath = sessionContext.getAllowedPath();
-
-            for (String s : tmpAllowedPath) {
-                resultPath = resultPath + "/" + s;
-            }
-
-
-        } else {
-            resultPath = sessionContext.getRootPath() + directory;
-        }
-
-        File resultDir = new File(resultPath);
-        result.add("200 Command okay.");
-        if (resultDir.listFiles().length > 0) {
-            result.add("-----------------");
-            result.add("Type      Name");
-            result.add("-----------------");
-            for (File fileFromDirectory : resultDir.listFiles()) {
+        List<String> answer = new ArrayList<>();
+        String path = pathGeneration(directory, sessionContext);
+        File file = new File(path);
+        if (file.exists() && Objects.requireNonNull(file.listFiles()).length > 0) {
+            addHead(answer);
+            for (File fileFromDirectory : Objects.requireNonNull(file.listFiles())) {
                 if (fileFromDirectory.isDirectory()) {
-                    result.add("dir      " + fileFromDirectory.getName());
+                    answer.add("dir      " + fileFromDirectory.getName());
                 } else {
-                    result.add("file      " + fileFromDirectory.getName());
+                    answer.add("file      " + fileFromDirectory.getName());
                 }
             }
-            result.add("-----------------");
+            answer.add("-----------------");
         } else {
-            result.add("This path is empty");
+            answer.add("This path is empty");
         }
 
-        return result;
+
+        return answer;
     }
+
+    private String pathGeneration(String directory, SessionContext sessionContext) {
+        String path;
+
+        Stack<String> stack = sessionContext.getAllowedPath();
+        if (directory == null || directory.equals("")) {
+            path = sessionContext.getRootPath().toString();
+            for (String s : stack) {
+                path = path + "/" + s;
+            }
+        } else {
+            path = sessionContext.getRootPath() + directory;
+        }
+        return path;
+    }
+
+    private void addHead(List<String> answer) {
+        answer.add("200 Command okay.");
+        answer.add("-----------------");
+        answer.add("Type      Name");
+        answer.add("-----------------");
+    }
+
 }
