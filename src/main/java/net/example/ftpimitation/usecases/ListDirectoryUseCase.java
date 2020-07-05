@@ -41,9 +41,8 @@ public class ListDirectoryUseCase {
 
     private String pathGeneration(String directory, SessionContext sessionContext) {
         String path;
-
         Stack<String> stack = sessionContext.getAllowedPath();
-        if (directory == null || directory.equals("")) {
+        if (directory.equals(null) || directory.equals("")) {
             path = sessionContext.getRootPath().toString();
             for (String s : stack) {
                 path = path + "/" + s;
