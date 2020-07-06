@@ -13,10 +13,9 @@ public class ListDirectoryUseCaseTest {
     public void correctListWithoutArgument() {
 
         String clientIp = "clientIp";
-        String directory = null;
         SessionContext sessionContext = new SessionContext(clientIp);
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
-        List<String> answer = listDirectoryUseCase.execute(directory);
+        List<String> answer = listDirectoryUseCase.execute(null);
 
         Assert.assertEquals(8, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
@@ -47,8 +46,6 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals("dir      parsersfolder", answer.get(4));
         Assert.assertEquals("dir      usecasesfolder", answer.get(5));
         Assert.assertEquals("-----------------",answer.get(6));
-
-
     }
 
     @Test
@@ -80,6 +77,6 @@ public class ListDirectoryUseCaseTest {
         List<String> answer = listDirectoryUseCase.execute(directory);
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("This path is empty", answer.get(0));
+        Assert.assertEquals("This path not exist", answer.get(0));
     }
 }

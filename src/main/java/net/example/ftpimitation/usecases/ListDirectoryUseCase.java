@@ -21,18 +21,23 @@ public class ListDirectoryUseCase {
         List<String> answer = new ArrayList<>();
         String path = pathGeneration(directory, sessionContext);
         File file = new File(path);
-        if (file.exists() && Objects.requireNonNull(file.listFiles()).length > 0) {
-            addHead(answer);
-            for (File fileFromDirectory : Objects.requireNonNull(file.listFiles())) {
-                if (fileFromDirectory.isDirectory()) {
-                    answer.add("dir      " + fileFromDirectory.getName());
-                } else {
-                    answer.add("file      " + fileFromDirectory.getName());
+        if (file.exists()) {
+            answer.add("200 Command okay.");
+            if (Objects.requireNonNull(file.listFiles()).length > 0) {
+                addHead(answer);
+                for (File fileFromDirectory : Objects.requireNonNull(file.listFiles())) {
+                    if (fileFromDirectory.isDirectory()) {
+                        answer.add("dir      " + fileFromDirectory.getName());
+                    } else {
+                        answer.add("file      " + fileFromDirectory.getName());
+                    }
                 }
+                answer.add("-----------------");
+            } else {
+                answer.add("This path is empty");
             }
-            answer.add("-----------------");
         } else {
-            answer.add("This path is empty");
+            answer.add("This path not exist");
         }
 
 
@@ -60,7 +65,6 @@ public class ListDirectoryUseCase {
     }
 
     private void addHead(List<String> answer) {
-        answer.add("200 Command okay.");
         answer.add("-----------------");
         answer.add("Type      Name");
         answer.add("-----------------");
