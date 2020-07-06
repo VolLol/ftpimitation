@@ -22,9 +22,9 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
-        Assert.assertEquals("dir      classfolder", answer.get(4));
-        Assert.assertEquals("dir      libsfolder",answer.get(5));
-        Assert.assertEquals("dir      testsfolder", answer.get(6));
+        Assert.assertEquals("dir      firstfolder", answer.get(4));
+        Assert.assertEquals("dir      secondfolder",answer.get(5));
+        Assert.assertEquals("dir      thirdfolder", answer.get(6));
         Assert.assertEquals("-----------------", answer.get(7));
     }
 
@@ -33,7 +33,7 @@ public class ListDirectoryUseCaseTest {
     public void correctListWithArgument() {
 
         String clientIp = "clientIp";
-        String directory = "/testsfolder";
+        String directory = "/firstfolder";
         SessionContext sessionContext = new SessionContext(clientIp);
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
@@ -43,8 +43,8 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
-        Assert.assertEquals("dir      parsersfolder", answer.get(4));
-        Assert.assertEquals("dir      usecasesfolder", answer.get(5));
+        Assert.assertEquals("file      ParserClass", answer.get(4));
+        Assert.assertEquals("file      ServerClass", answer.get(5));
         Assert.assertEquals("-----------------",answer.get(6));
     }
 
@@ -52,7 +52,7 @@ public class ListDirectoryUseCaseTest {
     public void correctListWithArgumentAndShowFiles() {
 
         String clientIp = "clientIp";
-        String directory = "/testsfolder/usecasesfolder/authusecase";
+        String directory = "/thirdfolder/usecasesfolder/authusecase";
         SessionContext sessionContext = new SessionContext(clientIp);
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
