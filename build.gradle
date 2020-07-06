@@ -27,5 +27,12 @@ dependencies {
 
     testCompile "org.mockito:mockito-core:2.+"
 }
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
+
 
 mainClassName = 'net.example.ftpimitation.FtpServer'
