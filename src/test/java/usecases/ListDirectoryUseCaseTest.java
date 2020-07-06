@@ -18,7 +18,7 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(8, answer.size());
+        Assert.assertEquals(7, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
@@ -39,7 +39,7 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(7, answer.size());
+        Assert.assertEquals(6, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
