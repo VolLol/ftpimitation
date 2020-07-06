@@ -110,10 +110,10 @@ public class ChangeDirectoryUseCaseTest {
         String clientIp = "clientIP";
         SessionContext sessionContext = new SessionContext(clientIp);
         ChangeDirectoryUseCase changeDirectoryUseCase = new ChangeDirectoryUseCase(sessionContext);
-        List<String> answer = changeDirectoryUseCase.execute(" tests");
+        List<String> answer = changeDirectoryUseCase.execute(" testsfolder");
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("250 CWD successful. Current directory: /tests", answer.get(0));
+        Assert.assertEquals("250 CWD successful. Current directory: /testsfolder", answer.get(0));
     }
 
     @Test
@@ -122,10 +122,10 @@ public class ChangeDirectoryUseCaseTest {
         SessionContext sessionContext = new SessionContext(clientIp);
         sessionContext.getAllowedPath().push("generated");
         ChangeDirectoryUseCase changeDirectoryUseCase = new ChangeDirectoryUseCase(sessionContext);
-        List<String> answer = changeDirectoryUseCase.execute(" /tests/usecases/authusecase");
+        List<String> answer = changeDirectoryUseCase.execute(" /testsfolder/usecasesfolder/authusecase");
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("250 CWD successful. Current directory: /tests/usecases/authusecase", answer.get(0));
+        Assert.assertEquals("250 CWD successful. Current directory: /testsfolder/usecasesfolder/authusecase", answer.get(0));
 
     }
 

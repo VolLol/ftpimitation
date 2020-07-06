@@ -18,14 +18,15 @@ public class ListDirectoryUseCaseTest {
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(7, answer.size());
+        Assert.assertEquals(8, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
-        Assert.assertEquals("dir      classes", answer.get(4));
-        Assert.assertEquals("dir      tests", answer.get(5));
-        Assert.assertEquals("-----------------", answer.get(6));
+        Assert.assertEquals("dir      classfolder", answer.get(4));
+        Assert.assertEquals("dir      libsfolder",answer.get(5));
+        Assert.assertEquals("dir      testsfolder", answer.get(6));
+        Assert.assertEquals("-----------------", answer.get(7));
     }
 
 
@@ -33,18 +34,19 @@ public class ListDirectoryUseCaseTest {
     public void correctListWithArgument() {
 
         String clientIp = "clientIp";
-        String directory = "/tests";
+        String directory = "/testsfolder";
         SessionContext sessionContext = new SessionContext(clientIp);
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
 
-        Assert.assertEquals(6, answer.size());
+        Assert.assertEquals(7, answer.size());
         Assert.assertEquals("200 Command okay.", answer.get(0));
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
-        Assert.assertEquals("dir      usecases", answer.get(4));
-        Assert.assertEquals("-----------------",answer.get(5));
+        Assert.assertEquals("dir      parsersfolder", answer.get(4));
+        Assert.assertEquals("dir      usecasesfolder", answer.get(5));
+        Assert.assertEquals("-----------------",answer.get(6));
 
 
     }
@@ -53,7 +55,7 @@ public class ListDirectoryUseCaseTest {
     public void correctListWithArgumentAndShowFiles() {
 
         String clientIp = "clientIp";
-        String directory = "/tests/usecases/authusecase";
+        String directory = "/testsfolder/usecasesfolder/authusecase";
         SessionContext sessionContext = new SessionContext(clientIp);
         ListDirectoryUseCase listDirectoryUseCase = new ListDirectoryUseCase(sessionContext);
         List<String> answer = listDirectoryUseCase.execute(directory);
@@ -80,6 +82,4 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals(1, answer.size());
         Assert.assertEquals("This path is empty", answer.get(0));
     }
-
-
 }
