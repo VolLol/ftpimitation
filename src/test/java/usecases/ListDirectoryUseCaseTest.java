@@ -24,9 +24,8 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
         Assert.assertEquals("dir      classes", answer.get(4));
-        Assert.assertEquals("dir      libs", answer.get(5));
-        Assert.assertEquals("dir      tests", answer.get(6));
-        Assert.assertEquals("-----------------", answer.get(7));
+        Assert.assertEquals("dir      tests", answer.get(5));
+        Assert.assertEquals("-----------------", answer.get(6));
     }
 
 
@@ -44,9 +43,8 @@ public class ListDirectoryUseCaseTest {
         Assert.assertEquals("-----------------",answer.get(1));
         Assert.assertEquals("Type      Name", answer.get(2));
         Assert.assertEquals("-----------------",answer.get(3));
-        Assert.assertEquals("dir      parsers", answer.get(4));
-        Assert.assertEquals("dir      usecases", answer.get(5));
-        Assert.assertEquals("-----------------",answer.get(6));
+        Assert.assertEquals("dir      usecases", answer.get(4));
+        Assert.assertEquals("-----------------",answer.get(5));
 
 
     }
