@@ -32,6 +32,9 @@ test {
         events "failed"
         exceptionFormat "full"
     }
+    test {
+        exclude '**/ListDirectoryUseCaseTest.class'
+    }
 }
 
 
